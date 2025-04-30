@@ -1,0 +1,160 @@
+ <!DOCTYPE html>
+ <html lang="FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Font awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="dom.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Menu la liberté</title>
+  </head>
+
+    
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Shopping Card</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="projet1.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="salondethe.html">menu1</a>
+              </li>
+              <li class="nav-item dropdown">
+               
+               
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1> MENU La Liberté</h1>
+      <section class="shopping-card-container">
+        <h5 class="total-price">BIENVENUE CHEZ SALON DE THE LA LIBERTE</h5>
+        <div class="total-price">
+         
+          <span> PRIX Total : </span>
+          <span class="total"> 0  </span>
+        </div>
+        <div class="list-products">
+          <!-- Product 1 : OMELETTES -->
+          <div class="card-body">
+            <div class="card" style="width: 18rem">
+              <img
+                src="C:\Users\khalil\Desktop\projet1\projet final/omelette.jpg "
+                class="card-img-top"
+                alt="OMELETTES"
+              />
+              <div class="card-body">
+                <h5 class="card-title">OMELETTE</h5>
+                <p class="card-text"> OMELETTE THON FROMAGE</p>
+                <h4 class="unit-price">10 DT </h4>
+                <div>
+                  <i class="fas fa-plus-circle" onclick="addOMELETTE()" ></i>
+                  <span class="quantity" id="basketQuantity">0</span>
+                  <i class="fas fa-minus-circle" onclick="minusOMELETTE()"></i>
+
+                </div>
+ 
+                <div>
+                  <i class="fas fa-trash-alt" onclick="minus()"></i>
+                  <i class="fas fa-heart" id="omletteHeart" onclick="red()"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 : crepe -->
+
+          <div class="card-body">
+            <div class="card" style="width: 18rem">
+              <img src="C:\Users\khalil\Desktop\projet1\projet final\crepe.jpg" class="card-img-top" alt="crepe" />
+              <div class="card-body">
+                <h5 class="card-title">CREPE</h5>
+                <p class="card-text">CREPE NUTELLA</p>
+                <h4 class="unit-price">11 dt</h4>
+                <div>
+                  <i class="fas fa-plus-circle" onclick="addcrepe()" ></i>
+                  <span class="quantity" id="socksQuantity">0</span>
+                  <i class="fas fa-minus-circle" onclick="minuscrepe()"  ></i>
+                </div>
+                <div>
+                  <i class="fas fa-trash-alt" onclick="minus0()"></i>
+                  <i class="fas fa-heart" id="socksHeart" onclick="red2()"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 : sandwitch -->
+          <div class="card-body">
+            <div class="card" style="width: 18rem">
+              <img src="C:\Users\khalil\Desktop\projet1\projet final\sandwitch.jpg" class="card-img-top" alt="sandwitch" />
+              <div class="card-body">
+                <h5 class="card-title">SANDWITCH</h5>
+                <p class="card-text"> SANDWITCH POULET FROMAGE</p>
+                <h4 class="unit-price">12 DT </h4>
+                <div>
+                  <i class="fas fa-plus-circle"  onclick="addsandwitch()"  ></i>
+                  <span class="quantity" id="bagQuantity" >0</span>
+                  <i class="fas fa-minus-circle" onclick="minussandwitch()" ></i>
+                </div>
+                <div>               
+
+                  <i class="fas fa-trash-alt" onclick="minus00()"></i>
+                  <i class="fas fa-heart" id="bagHeart"onclick="red3()" ></i>   </div>         
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    
+  </body>
+ </html>
